@@ -1,0 +1,72 @@
+.header{
+    padding: 0 10px;
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 60px 2fr minmax(0px, 4fr) 2fr 2fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    background: #5085A5;
+
+
+    &__logo{
+      height: 60px;
+      pointer-events: none;
+
+      img{
+        min-height: 40px;
+        height: 100%;
+      }
+    }
+
+
+    &__title{
+      justify-self: start;
+      font-size: calc(var(--index) * 1.5);
+    }
+
+
+    &__addNote{
+      grid-column: 4;
+
+
+      button{
+        position: relative;
+        padding: 10px;
+        border-radius: 5px;
+        color: #31708E;
+        background: #F7F9FB;
+
+        &:hover{
+          top: 0.5px;
+          box-shadow: 0 0 2px #000;
+        }
+      }
+    }
+
+
+    &__searchNote{
+      input{
+        padding: 5px;
+        border-radius: 5px;
+        color: #31708E;
+        &::placeholder{
+          color: #31708E;
+        }
+      }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header__logo {
+    animation: header__logo_spin infinite 20s linear;
+  }
+}
+@keyframes header__logo_spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

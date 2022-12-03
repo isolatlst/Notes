@@ -1,0 +1,30 @@
+.note {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	background: #5085A5;
+	cursor: pointer;
+
+	&__title {
+		font-size: 2em;
+	}
+
+
+	&__body {
+
+
+
+	}
+
+
+	&__text {
+	text-align: justify;
+	}
+
+
+	&__tags {
+
+	}
+}
