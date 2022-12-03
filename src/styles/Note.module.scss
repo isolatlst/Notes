@@ -7,20 +7,25 @@
 	background: #5085A5;
 	cursor: pointer;
 
+
 	&__title {
+		line-height: 0.75;
 		font-size: 2em;
+		text-align: center;
+		font-weight: 500;
 	}
 
 
 	&__body {
-
+		margin-top: 15px;
+		overflow: hidden;
 
 
 	}
 
 
 	&__text {
-	text-align: justify;
+		text-align: justify;
 	}
 
 
