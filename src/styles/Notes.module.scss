@@ -1,3 +1,4 @@
+@import "variables.scss";
 .notes{
 	width: 100vw;
 	grid-area: main;
@@ -8,19 +9,5 @@
 	grid-auto-rows: minmax(250px, 400px);
   	gap: 10px;
 
-	overflow-y: overlay;
-	scrollbar-width: 3px;
-	scrollbar-color: #8FC1E3 transparent;
-
-	&::-webkit-scrollbar {
-		width: 4px;
-		background: transparent;
-	}
-	&::-webkit-scrollbar-thumb {
-		border-radius: 6px;
-		background: #8FC1E3;
-	}
-	&::-webkit-scrollbar-thumb:hover {
-		background-color: rgba(255,255,255,.5);
-	}
+ 	@include scroll;
 }

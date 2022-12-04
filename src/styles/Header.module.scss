@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .header{
     padding: 0 10px;
     display: grid;
@@ -6,7 +8,7 @@
     grid-gap: 10px;
     justify-items: center;
     align-items: center;
-    background: #687864;
+    background: $bg-color-five;
 
 
     &__logo{
@@ -34,8 +36,8 @@
         position: relative;
         padding: 10px;
         border-radius: 5px;
-        color: #31708E;
-        background: #F7F9FB;
+        color: $color-four;
+        background: $bg-color-one;
 
         &:hover{
           top: 0.5px;
@@ -49,9 +51,9 @@
       input{
         padding: 5px;
         border-radius: 5px;
-        color: #31708E;
+        color: $color-four;
         &::placeholder{
-          color: #31708E;
+          color: $color-four;
         }
       }
     }

@@ -35,6 +35,9 @@ html, body {
 input, button, textarea {
   font-family: inherit;
 }
+textarea{
+  resize: none;
+}
 
 select {
   -webkit-appearance: none;

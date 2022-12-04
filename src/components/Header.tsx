@@ -1,8 +1,10 @@
 import logo from '../logo.svg'
 import classes from '../styles/Header.module.scss'
+import {Modal, useModal} from "./Modal";
 
 
 const Header = () => {
+    const {isOpen, toggle} = useModal()
     return (
         <header className={classes.header}>
             <div className={`${classes.header__logo} ${classes.header__logo_spin}`}>
@@ -12,7 +14,8 @@ const Header = () => {
                 Notes
             </div>
             <div className={classes.header__addNote}>
-                <button>New note</button>
+                <Modal isOpen={isOpen} toggleIsOpen={toggle}/>
+                <button onClick={toggle}>New note</button>
             </div>
             <div className={classes.header__searchNote}>
                 <input type="text" placeholder='search'/>
