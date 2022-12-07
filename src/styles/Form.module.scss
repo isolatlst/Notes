@@ -1,0 +1,55 @@
+@import "variables";
+
+.tag {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+
+	label {
+		width: 65%;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__input_text {
+		width: 90%;
+		font-size: $fz-text;
+		border-bottom: 1px solid #000;
+		color: $color-four;
+		background: $color-one;
+	}
+
+	&__addItem {
+		margin-left: auto;
+		padding: 8px;
+		width: 30%;
+		border-radius: 5px;
+		background: $color-six--success;
+	}
+
+	&__items{
+		margin-top: 10px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		margin: 10px 10px 0 0;
+		display: flex;
+
+	}
+	&__text{
+		padding: 5px;
+		width: calc(var(--index)*4.5);
+		display: flex;
+		background: $color-two;
+	}
+	&__deleteItem{
+		padding-right: 5px;
+		font-size: $fz-text;
+		color: #000;
+		background: $color-two;
+	}
+
+}

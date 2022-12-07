@@ -1,21 +1,20 @@
 import React from "react";
 import classes from './styles/App.module.scss'
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Notes from "./components/Notes";
+import {useModal} from "./components/common/Modal";
 
 
 const App = () => {
+    const {isOpen, toggle} = useModal()
+
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <div className={classes.app}>
-                <Header />
-                <Routes>
-                    <Route path='/' element={<Notes />} />
-                    {/*<Route path='/' element={<Navigate to={`/f${(+new Date()).toString(16)}`}/>}/>*/}
-                </Routes>
-            </div>
-        </BrowserRouter>
+        <div className={classes.app}>
+            <Header isOpen={isOpen} toggle={toggle} initialValues={{
+                id: 0, title: "", text: "", tags: [] as Array<string>, tag: ""
+            }}/>
+            <Notes/>
+        </div>
     )
 }
 

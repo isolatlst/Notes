@@ -3,7 +3,6 @@
 	width: 100vw;
 	grid-area: main;
   	display: grid;
-  	justify-items: start;
   	padding: 10px;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	grid-auto-rows: minmax(250px, 400px);
@@ -11,3 +10,20 @@
 
  	@include scroll;
 }
+
+@media (max-width: 600px) {
+	.notes{
+		grid-auto-rows: minmax(200px, 300px);
+	}
+}
+
+.note {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	background: $color-three;
+	cursor: pointer;
+}
+

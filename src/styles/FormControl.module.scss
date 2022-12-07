@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+
+.note{
+	&__label {
+		display: flex;
+		flex-direction: column;
+		border-bottom: 1px solid #000;
+
+		input, textarea {
+			width: 100%;
+			line-height: 1em;
+			font-size: $fz-text;
+			color: $color-four;
+			background: $color-one;
+		}
+
+		input::placeholder, textarea::placeholder {
+			font-size: $fz-text;
+		}
+
+		textarea {
+			padding-right: 5px;
+			@include scroll;
+		}
+	}
+
+	&__title {
+		margin: 15px 0 7.5px;
+		font-size: 1.25em;
+		color: $color-four;
+	}
+}
+
+.active {
+	border-bottom: 1px solid $color-four;
+}
+
+.error {
+	border-bottom: 1px solid $color-seven--failed;
+}
+
+.titleError {
+	color: $color-seven--failed;
+}

@@ -1,9 +1,10 @@
-$bg-color-one: #F7F9FB;
-$bg-color-two: #8FC1E3;
-$bg-color-three: #5085A5;
+$color-one: #F7F9FB;
+$color-two: #8FC1E3;
+$color-three: #5085A5;
 $color-four: #31708E;
-$bg-color-five: #687864;
-$bg-color-six: #88d56d;
+$color-five: #687864;
+$color-six--success: #88d56d;
+$color-seven--failed: #da3c3c;
 
 $fz-title: 2em;
 $fz-text: 20px;
@@ -12,7 +13,7 @@ $fz-text: 20px;
 @mixin scroll() {
 	overflow-y: overlay;
 	scrollbar-width: 3px;
-	scrollbar-color: $bg-color-two transparent;
+	scrollbar-color: $color-two transparent;
 
 	&::-webkit-scrollbar {
 		width: 4px;
@@ -20,7 +21,7 @@ $fz-text: 20px;
 	}
 	&::-webkit-scrollbar-thumb {
 		border-radius: 6px;
-		background: $bg-color-two;
+		background: $color-two;
 	}
 	&::-webkit-scrollbar-thumb:hover {
 		background-color: rgba(255,255,255,.5);

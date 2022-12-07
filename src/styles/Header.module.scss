@@ -8,7 +8,7 @@
     grid-gap: 10px;
     justify-items: center;
     align-items: center;
-    background: $bg-color-five;
+    background: $color-five;
 
 
     &__logo{
@@ -37,7 +37,7 @@
         padding: 10px;
         border-radius: 5px;
         color: $color-four;
-        background: $bg-color-one;
+        background: $color-one;
 
         &:hover{
           top: 0.5px;
