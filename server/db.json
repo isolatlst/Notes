@@ -44,6 +44,16 @@
         "#fsdjfksdf",
         "#fdsjfksdf"
       ]
+    },
+    {
+      "id": 8448,
+      "title": "Some title after deploy",
+      "text": "Successful #deploy ",
+      "tags": [
+        "#deploy",
+        "#someTag",
+        "#one-more"
+      ]
     }
   ]
 }

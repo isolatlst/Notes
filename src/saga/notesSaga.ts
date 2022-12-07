@@ -2,7 +2,7 @@ import {call, put, takeEvery} from 'redux-saga/effects'
 import axios from "axios";
 import {NOTES__CREATE_NOTE, NOTES__DELETE_NOTE, NOTES__FETCH_NOTES, NOTES__PUT_NOTE, NOTES__SEARCH_NOTE, notesACs, notesACsSaga, NoteType} from "../store/notes-action-creator";
 
-const SERVER_URL = 'http://localhost:3001/notes'
+const SERVER_URL = 'https://various-cactus-roar.glitch.me/notes'
 
 const fetchNotes = () => axios.get(SERVER_URL)
 const createNote = (note: NoteType) => axios.post(SERVER_URL, {...note})
