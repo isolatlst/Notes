@@ -3,7 +3,8 @@ import {createPortal} from "react-dom";
 import Form, {FormPropsType} from "./Form";
 import ScaleNote from "../ScaleNote";
 
-export type ModalPropsType = ReturnType<typeof useModal> & FormPropsType
+type PropsType = {defaultEditMode: boolean}
+export type ModalPropsType = ReturnType<typeof useModal> & FormPropsType & PropsType
 type ModalType = (args: ModalPropsType) => React.ReactPortal | null
 
 
@@ -13,7 +14,7 @@ export const useModal = () => {
     return {isOpen, toggle}
 }
 
-export const Modal: ModalType = ({isOpen, toggle, initialValues}) => {
+export const Modal: ModalType = ({isOpen, toggle, initialValues, defaultEditMode}) => {
     const [isNoteEdit, setIsNoteEdit] = useState(false)
     const toggleIsNoteEdit = () => setIsNoteEdit(!isNoteEdit)
     const onKeyDown = (event: KeyboardEvent) => {
@@ -29,7 +30,7 @@ export const Modal: ModalType = ({isOpen, toggle, initialValues}) => {
 
     return isOpen
         ? createPortal(
-            isNoteEdit ?
+            isNoteEdit  || defaultEditMode?
                 <Form toggle={toggle} initialValues={initialValues}/>
                 : <ScaleNote {...initialValues} toggle={toggle} setIsNoteEdit={toggleIsNoteEdit}/>
             , document.body)

@@ -6,7 +6,7 @@ import {notesACsSaga} from "../store/notes-action-creator";
 import {useDispatch} from "react-redux";
 
 
-const Header = ({isOpen, toggle, initialValues}: ModalPropsType) => {
+const Header = ({isOpen, toggle, initialValues, defaultEditMode}: ModalPropsType) => {
     const dispatch = useDispatch()
     const [searchText, setSearchText] = useState('')
 
@@ -26,7 +26,7 @@ const Header = ({isOpen, toggle, initialValues}: ModalPropsType) => {
                 Notes
             </div>
             <div className={classes.header__addNote}>
-                <Modal isOpen={isOpen} toggle={toggle} initialValues={initialValues} />
+                <Modal isOpen={isOpen} toggle={toggle} initialValues={initialValues} defaultEditMode={defaultEditMode} />
                 <button onClick={toggle}>New note</button>
             </div>
             <div className={classes.header__searchNote}>

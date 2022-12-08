@@ -10,7 +10,7 @@ const App = () => {
 
     return (
         <div className={classes.app}>
-            <Header isOpen={isOpen} toggle={toggle} initialValues={{
+            <Header isOpen={isOpen} defaultEditMode={true} toggle={toggle} initialValues={{
                 id: 0, title: "", text: "", tags: [] as Array<string>, tag: ""
             }}/>
             <Notes/>

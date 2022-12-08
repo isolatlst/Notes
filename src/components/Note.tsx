@@ -19,7 +19,7 @@ const Note: React.FC<PropsType> = ({title, text, tags,id}) => {
 
     return (
         <>
-            {isOpen && <Modal isOpen={isOpen} toggle={toggle} initialValues={{id, title, text, tags, tag: ''}}/>}
+            {isOpen && <Modal defaultEditMode={false} isOpen={isOpen} toggle={toggle} initialValues={{id, title, text, tags, tag: ''}}/>}
             <div className={classes.note} onClick={toggle}>
                 <div className={classes.note__title}>
                     {title.length > titleLength ? `${title.slice(0, titleLength)}...` : title}
