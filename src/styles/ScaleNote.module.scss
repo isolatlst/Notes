@@ -1,0 +1,52 @@
+@import "variables";
+
+.note {
+	position: relative;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 10px;
+	background: $color-three;
+	cursor: pointer;
+
+	&__title, &__text{
+		color: $color-four;
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+
+	&__title {
+		line-height: 0.85;
+		font-size: $fz-title;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	&__text {
+		margin: 15px 0;
+		font-size: $fz-text;
+		text-align: justify;
+	}
+
+
+	&__tags {
+		text-align: center;
+		span{
+			color: $color-four;
+		}
+	}
+
+	&__settings{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		transition: transform 3s ease;
+		&:hover{
+			transform: rotate(540deg);
+		}
+	}
+}

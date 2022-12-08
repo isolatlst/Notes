@@ -16,6 +16,7 @@ const Note: React.FC<PropsType> = ({title, text, tags,id}) => {
     let titleLength = 18
     let textLength = 430
 
+
     return (
         <>
             {isOpen && <Modal isOpen={isOpen} toggle={toggle} initialValues={{id, title, text, tags, tag: ''}}/>}

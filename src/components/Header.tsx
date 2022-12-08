@@ -26,7 +26,7 @@ const Header = ({isOpen, toggle, initialValues}: ModalPropsType) => {
                 Notes
             </div>
             <div className={classes.header__addNote}>
-                <Modal isOpen={isOpen} toggle={toggle} initialValues={initialValues}/>
+                <Modal isOpen={isOpen} toggle={toggle} initialValues={initialValues} />
                 <button onClick={toggle}>New note</button>
             </div>
             <div className={classes.header__searchNote}>
