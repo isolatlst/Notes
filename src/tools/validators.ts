@@ -1,6 +1,6 @@
 export const validateTitle = (value: number | string) => {
     if (!value) return 'Please, enter title'
-    if (value.toString().length > 24) return 'Title is toooo long'
+    if (value.toString().length > 22) return 'Title is toooo long'
     return false
 }
 export const validateText = (value: number | string) => {

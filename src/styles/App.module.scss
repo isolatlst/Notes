@@ -2,7 +2,7 @@
 @import "variables";
 
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 .app {
   display: grid;
@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 *{
-  font-family: 'Nerko One', cursive;
+  font-family: 'Kanit', sans-serif;
   color: $color-one;
   letter-spacing: 1px;
 }
