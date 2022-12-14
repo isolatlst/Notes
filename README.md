@@ -1,5 +1,11 @@
 # notes
 
 При написании проекта были использованы следующие библиотеки:
-- 
-Данный проект задеплоен на Netlify + Glitch
+- axios
+- formik
+- react
+- redux, react-redux
+- redux-saga
+
+Данный проект задеплоен на Netlify + Glitch (при редактировании или добавлении заметок прошу отктатиь всё до первоначального состояния):
+https://kirill-ghurin-notes.netlify.app/
